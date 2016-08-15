@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Push Notification Admin Panel</title>
+
+    </head>
+    <body>
+
+        <div><fieldset>
+    <h1>Neurobin Example</h1>
+    <h3>Push Notification Admin Panel</h3></fieldset></div><br></br>
+     <div><fieldset><legend>Current Registered users</legend>
+    <?php echo $no_of_users; ?></fieldset></div><br></br>
+    <form method = 'POST' action = 'gcm_main.php' enctype="multipart/form-data">
+    <div><fieldset><legend>Notification Type</legend>
+ 
+<select name="dropdown">
+  <option value="default" selected="selected">Default</option>
+  <option value="type1">Type1</option>
+</select></fieldset>
+</div><br></br>
+<div><fieldset><legend>Notification Message</legend>
+    
+        <div>
+
+            <textarea rows = "3" name = "message" cols = "75" placeholder = "Type message here (keep as short as possible)" required></textarea>
+        </div></fieldset></div><br>
+        <div>
+            <input type = "submit" value = "Send Notification">
+        </div>
+        
+    </form>
+    </body>
+</html>
